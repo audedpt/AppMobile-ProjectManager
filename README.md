@@ -25,7 +25,7 @@ Affiche la liste des tâches entrées dans la base de donnée
 
 Clique sur une tâche pour la modifier ou la supprimer
 
-#ModifView
+#ModifView#
 
 Permet de changer des informations ou de supprimer la tâche de la base de données
 
