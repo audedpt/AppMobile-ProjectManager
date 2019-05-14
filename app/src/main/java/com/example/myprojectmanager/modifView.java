@@ -1,8 +1,6 @@
 package com.example.myprojectmanager;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -61,10 +59,7 @@ public class modifView extends AppCompatActivity {
                 String newduration = durationinp.getText().toString();
 
                 if (!newtask.equals("") && !newdate.equals("") && !newduration.equals("")){
-                     myDB.updateDate(selectedtask, selectedduration, selecteddate, newdate);
-                     myDB.updateDuration(selectedtask, selectedduration, selecteddate, newduration);
-                     myDB.updateTask(selectedtask, selectedduration, selecteddate, newtask, newduration, newdate);
-
+                    myDB.updateAll(selectedtask, selectedduration, selecteddate,newtask, newduration, newdate);
                     Toast.makeText(modifView.this, "Data successfully modified!", Toast.LENGTH_LONG).show();
 
                 }else{

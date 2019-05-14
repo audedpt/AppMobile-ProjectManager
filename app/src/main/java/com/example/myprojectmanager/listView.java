@@ -13,8 +13,6 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
 import java.util.ArrayList;
 
@@ -88,19 +86,12 @@ public class listView extends AppCompatActivity {
                      while ((duration.moveToNext())) {
                         itemduration = duration.getString(0);
                     }
-
-               // if (itemdate != null && itemduration != null){
                         Log.d(TAG, "onItemClick: Data found");
                         Intent IntentEdit = new Intent(listView.this,modifView.class);
                         IntentEdit.putExtra("date", itemdate);
                         IntentEdit.putExtra("duration", itemduration);
                         IntentEdit.putExtra("task", task);
                         startActivity(IntentEdit );
-              //     }
-              //  else{
-              //    Toast.makeText(listView.this, "No Data associated with that task", Toast.LENGTH_LONG).show();
-
-             // }
             }
         });
 
